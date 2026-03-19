@@ -1,0 +1,68 @@
+/* Details Toggle Plugin Styles */
+
+.details-toggle {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	margin: 0.75em 0;
+	background: var(--background-secondary);
+	overflow: hidden;
+}
+
+.details-toggle-summary {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	cursor: pointer;
+	user-select: none;
+	font-weight: 600;
+	color: var(--text-normal);
+	list-style: none;
+	background: var(--background-secondary);
+	transition: background 0.15s ease;
+}
+
+.details-toggle-summary::-webkit-details-marker {
+	display: none;
+}
+
+.details-toggle-summary::marker {
+	display: none;
+}
+
+/* Custom arrow indicator */
+.details-toggle-summary::before {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 7px solid var(--text-muted);
+	transition: transform 0.2s ease;
+	flex-shrink: 0;
+}
+
+.details-toggle[open] > .details-toggle-summary::before {
+	transform: rotate(90deg);
+}
+
+.details-toggle-summary:hover {
+	background: var(--background-modifier-hover);
+}
+
+/* Content area */
+.details-toggle-content {
+	padding: 12px 16px 12px 16px;
+	border-top: 1px solid var(--background-modifier-border);
+	color: var(--text-normal);
+}
+
+/* Remove top margin on first child inside content */
+.details-toggle-content > *:first-child {
+	margin-top: 0;
+}
+
+.details-toggle-content > *:last-child {
+	margin-bottom: 0;
+}

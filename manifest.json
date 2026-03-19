@@ -1,0 +1,10 @@
+{
+	"id": "details-toggle",
+	"name": "Details Toggle",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "Renders <details>/<summary> HTML blocks as native collapsible toggles in Obsidian.",
+	"author": "dayeggpi",
+	"authorUrl": "https://github.com/dayeggpi",
+	"isDesktopOnly": false
+}
